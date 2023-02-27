@@ -22,9 +22,10 @@ def valorPagamento(valor, dias):
     if dias == 0:
         return valor
     else:
-        juros = 0.1 * dias
-
-        return valor + ((3 * valor)/100) + juros 
+    else:
+        juros = (0.1/100 * dias) * valor
+        
+        return valor + (valor * (3/100)) + juros 
 
 total = 0
 cont = 0
